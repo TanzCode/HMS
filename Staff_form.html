@@ -1,0 +1,100 @@
+<!-- Staff information form -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Head section of the HTML document -->
+  <title></title> <!-- Title of the web page -->
+  <meta charset="utf-8"> <!-- Character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive viewport settings -->
+  <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Linking the Bootstrap CSS file -->
+  <script src="js/bootstrap.min.js"></script> <!-- Linking the Bootstrap JavaScript file -->
+</head>
+
+<body style="background-image: url('bg.png'); background-attachment: fixed; background-size: 100% 100%;">
+ <div class="container"> <!-- Container element to hold the content -->
+    <div class="row justify-content-center mt-5"> <!-- Row element for organizing content horizontally with centered alignment -->
+        <div class="col-lg-7 col-md-6 col-sm-6"> <!-- Column element with different widths based on screen size -->
+            <div class="card shadow"> <!-- Card element with a shadow effect -->
+
+          <!-- Card header -->
+          <div class="card-title text-center border-bottom" style="background-color: #469597; color:#ffffff">
+            <h2 class="p-3">Staff Information</h2>
+          </div>
+          <div class="card-body">
+            <!-- Staff information form -->
+            <form action="Staff_Insert.php" method="POST">
+              <!-- Staff ID -->
+              <div class="mb-3">
+                <label for="S_ID" class="form-label">Staff ID</label>
+                <input type="text" class="form-control" name="S_ID">
+              </div>
+              <!-- First Name and Last Name -->
+              <div class="mb-3">
+                <table class="mb-3" width="100%">
+                  <tr>
+                    <td>
+                      <label for="Fname" class="form-label">First Name</label>
+                      <input type="text" class="form-control" name="Fname">
+                    </td>
+                    <td>
+                      <label for="Lname" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" name="Lname">
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!-- NIC Number -->
+              <div class="mb-3">
+                <label for="NIC" class="form-label">NIC No</label>
+                <input type="text" class="form-control" name="NIC">
+              </div>
+              <!-- Gender -->
+              <div class="mb-3">
+                <label for="Gender" class="form-label">Gender</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="Gender" id="Male" value="Male">
+                  <label class="form-check-label" for="Gender">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="Gender" id="Female" value="Female">
+                  <label class="form-check-label" for="Female">Female</label>
+                </div>
+              </div>
+              <!-- Email address -->
+              <div class="form-group">
+                <label for="Email">Email address</label>
+                <input type="email" class="form-control" aria-describedby="emailHelp" name="Email">
+              </div>
+              <!-- Phone number -->
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone number</label>
+                <input type="text" class="form-control" name="phone">
+              </div>
+              <!-- Address -->
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" name="address">
+              </div>
+              <!-- Department -->
+              <div class="mb-3">
+                <label for="Department" class="form-label">Department</label>
+                <input type="text" class="form-control" name="Department">
+              </div>
+              <!-- Job Title -->
+              <div class="mb-3">
+                <label for="job" class="form-label">Job Title</label>
+                <input type="text" class="form-control" name="job">
+              </div>
+              <!-- Form buttons -->
+              <div class="mb-3">
+                <button type="submit" class="btn btn-outline-info" style="background-color: #469597; color:#ffffff"> Add new Staff</button>
+                <button type="reset" class="btn btn-outline-info" style="background-color: #469597; color:#ffffff"> Reset </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

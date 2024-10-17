@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        
+        @media (min-width: 992px) {
+            
+            .navbar,
+            .navbar-collapse {
+                flex-direction: column;
+            }
+            .navbar-expand-lg .navbar-nav {
+                flex-direction: column;
+            }
+            .navbar {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+    </style>
+</head>
+<body style="background-image: url('bg.png');  background-attachment: fixed;
+  background-size: 100% 100%;"><!-- Set background image and properties -->
+ 
+<div class="container-fluid"> 
+    <!-- Row with full viewport height -->
+  <div class="row " style="height: 100vh">
+    <!-- Column for side navigation -->
+    <div class="col-lg-2 col-md-3 col-sm-4">
+      <nav class="navbar navbar-expand-lg navbar-light bs-side-navbar" style="background-color: #469597"><!-- Side navigation bar -->
+    <div >
+    <a class="navbar-brand" href="Home.html">
+        <img src="log.png" alt="" width="100%" height="100%" ">
+    </a><!-- Logo image -->
+    </div>
+    <!-- Navbar toggle button icon -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="nav nav-tabs navbar-nav ms-auto">
+            <!-- Home link -->
+            <li class="nav-item active">
+                <a style="color:#ffffff; font-family: verdana; font-size: 18px;"class="nav-link" href="javascript:void(0)" onclick="loadHome()"  >Home <span class="sr-only"></span></a>
+            </li>
+            <!-- Services link -->
+            <li class="nav-item">
+                <a style="color:#ffffff; font-family: verdana; font-size: 18px;" class="nav-link" href="javascript:void(0)" onclick="LoadServices()" >Services</a>
+            </li>
+            <!-- Contact Us link -->
+            <li class="nav-item">
+                <a style="color:#ffffff; font-family: verdana; font-size: 18px;" class="nav-link"  href="javascript:void(0)" onclick="loadContact()" >Contact Us</a>
+            </li>
+            <!-- About Us link -->
+            <li class="nav-item">
+                <a style="color:#ffffff; font-family: verdana; font-size: 18px;" class="nav-link" href="javascript:void(0)" onclick="loadAboutUs()" >About Us</a>
+            </li>
+
+
+
+            <!-- Patient dropdown -->
+            <li class="nav-item dropdown">
+                <a style="color:#ffffff; font-family: verdana;  font-size: 18px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Patient
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <!-- Register link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="LoadPatientReg()" >Register</a></li>
+                    <!-- View patient link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="loadpatientview()" >View patient</a></li>
+                    <!-- View patient history link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="patient_history()" >View patient History</a></li>
+                    <!-- Manage link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="Addpatienthistory()" >Add patient history</a></li>
+                </ul>
+            </li>
+
+ 			<!-- Patient waiting list dropdown -->
+            <li class="nav-item dropdown">
+                <a style="color:#ffffff; font-family: verdana;  font-size: 18px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Patient Waiting list
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <!-- Register link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="Addwaiting()" >Add a patient to waiting list</a></li>
+                    <!-- View patient link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="viewWaiting()" >View patient waiting list</a></li>
+                    
+                </ul>
+            </li>
+            <!--Patient Invoice-->
+             <li class="nav-item">
+                <a style="color:#ffffff; font-family: verdana; font-size: 18px;" class="nav-link" href="javascript:void(0)" onclick="invoice()" >Patient invoice</a>
+            </li>
+
+            <!-- Room dropdown -->
+            <li class="nav-item dropdown">
+                <a style="color:#ffffff; font-family: verdana;  font-size: 18px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Room
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <!-- Add new room link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="newRoom()" >Add new room</a></li>
+                    <!-- View Rooms link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="viewRoom()">View Rooms</a></li>
+                    <!-- Manage Room schedule link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="Managescheduleroom()">Manage Room schedule</a></li>
+                    <!-- Enter new Room schedule link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="NewRoomSchedule()">Enter new Room schedule</a></li>
+                </ul>
+            </li>
+            <!-- ward dropdown -->
+            <li class="nav-item dropdown">
+                <a style="color:#ffffff; font-family: verdana;  font-size: 18px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ward
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <!-- Add new Staff member link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="Newward()" >Add new ward</a></li>
+                    <!-- View Staff link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="viewward()">View wards</a></li>
+                    <!-- View staff schedule link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="viewwardSchedule()">View ward schedule</a></li>
+                    <!-- Add new OT schedule link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="NewWardSchedule()" >Add ward schedule</a></li>
+                </ul>
+            </li>
+
+            <!-- Operation Theater dropdown -->
+            <li class="nav-item dropdown">
+                <a style="color:#ffffff; font-family: verdana;  font-size: 18px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Operation Theater
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <!-- Add new operation theater link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="NewOT()" >Add new operation theater</a></li>
+                    <!-- View operation theater link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="viewOT()">View operation theater</a></li>
+                    <!-- View operation theater schedule link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="viewOTschedule()" >View operation theater schedule</a></li>
+                    <!-- Add new OT schedule link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="NewwOTschedule()">Add new OT schedule</a></li>
+                </ul>
+            </li>
+
+            <!-- Staff dropdown -->
+            <li class="nav-item dropdown">
+                <a style="color:#ffffff; font-family: verdana;  font-size: 18px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Staff
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <!-- Add new Staff member link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="NewwStaff()">Add new Staff member</a></li>
+                    <!-- View Staff link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="viewStaff()">View staff members</a></li>
+                    <!-- View staff schedule link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="viewStaffSchedule()">View Staff schedule</a></li>
+                    <!-- Add new OT schedule link -->
+                    <li><a class="dropdown-item" href="javascript:void(0)" onclick="newStaffSchedule()">Add staff schedule</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a style="color:#ffffff; font-family: verdana; font-size: 18px;" class="nav-link" href="Home.html">Log-out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    </div>
+    <div class="col-lg-10 col-md-9 col-sm-8" >
+      
+        <!-- Main Content Area -->
+        <iframe id="mainContent" style="width: 100%; height: 100%;" frameborder="0" src="Home.html"></iframe>
+    </div>
+
+</div>
+</div>
+<footer>
+        <div class="container">
+            <p>&copy; 2023 Arogya Health Care. All rights reserved.</p>
+        </div>
+</footer>
+<script>
+
+    function loadHome() {
+        document.getElementById("mainContent").src = "Home.html";
+    }
+    function LoadServices() {
+        document.getElementById("mainContent").src = "services.html";
+    }
+    function loadContact() {
+        document.getElementById("mainContent").src = "contactUs.html";
+    }
+    function loadAboutUs() {
+        document.getElementById("mainContent").src = "aboutUs.html";
+    }
+
+//patient
+	function LoadPatientReg() {
+        document.getElementById("mainContent").src = "patient_registration.html";
+    }
+    function loadpatientview() {
+        document.getElementById("mainContent").src = "patient_search.php";
+    }
+    function patient_history() {
+        document.getElementById("mainContent").src = "patient_history_search.php";
+    }
+    function Addpatienthistory() {
+        document.getElementById("mainContent").src = "patient_History_form.html";
+    }
+
+//waiting List
+	function Addwaiting() {
+        document.getElementById("mainContent").src = "waitingList.html";
+    }
+    function viewWaiting() {
+        document.getElementById("mainContent").src = "patient_waiting_search.php";
+    }
+//invoice
+   function invoice() {
+        document.getElementById("mainContent").src = "invoice.html";
+    }
+//room
+ 	function newRoom() {
+        document.getElementById("mainContent").src = "room.html";
+    }
+    function viewRoom() {
+        document.getElementById("mainContent").src = "Room_Search.php";
+    }
+    function Managescheduleroom() {
+        document.getElementById("mainContent").src = "room_schedule_search.php";
+    }
+    function NewRoomSchedule() {
+        document.getElementById("mainContent").src = "Room_schedule_form.html";
+    }
+//ward
+ 	function Newward() {
+        document.getElementById("mainContent").src = "ward.html";
+    }
+    function viewward() {
+        document.getElementById("mainContent").src = "ward_search.php";
+    }
+    function viewwardSchedule() {
+        document.getElementById("mainContent").src = "ward_schedule_search.php";
+    }
+    function NewWardSchedule() {
+        document.getElementById("mainContent").src = "ward_schedule_form.html";
+    }
+//OT
+ 	function NewOT() {
+        document.getElementById("mainContent").src = "OT.html";
+    }
+    function viewOT() {
+        document.getElementById("mainContent").src = "OT_search.php";
+    }
+    function viewOTschedule() {
+        document.getElementById("mainContent").src = "OT_schedule_search.php";
+    }
+    function NewwOTschedule() {
+        document.getElementById("mainContent").src = "OT_schedule_form.html";
+    }
+//staff
+ 	function NewwStaff() {
+        document.getElementById("mainContent").src = "Staff_form.html";
+    }
+    function viewStaff() {
+        document.getElementById("mainContent").src = "Staff_search.php";
+    }
+    function viewStaffSchedule() {
+        document.getElementById("mainContent").src = "Staff_schedule_search.php";
+    }
+    function newStaffSchedule() {
+        document.getElementById("mainContent").src = "Staff_schedule.html";
+    }
+
+
+</script>
+
+         
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!--patient History form-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient medical history</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale="1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body style="background-image: url('bg.png');  background-attachment: fixed;
+  background-size: 100% 100%;">
+	
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-7 col-md-6 col-sm-6">
+        <div class="card shadow">
+          <div class="card-title text-center border-bottom" style="background-color: #469597; color:#ffffff">
+            <h2 class="p-3">Patient history</h2>
+          </div>
+          <div class="card-body">
+  <!--Patient details form-->
+          	<form action="patient_history_Insert.php" method="POST">
+           
+
+              <div class="mb-3">
+                <label for="P_H_ID" class="form-label">Patient history No</label>
+                <input type="text" class="form-control" name="P_H_ID">
+              </div>
+
+
+              <div class="mb-3">
+                <label for="P_ID" class="form-label">Patient ID</label>
+                <input type="text" class="form-control" name="P_ID">
+              </div>
+
+              <div class="mb-3">
+                    
+                    <label for="Ailment" class="form-label">Ailment</label>
+                    <input type="text" class="form-control" name="Ailment">
+    
+                 </div>
+                   <div class="mb-3">
+                   <label for="date" class="form-label">Date</label>
+                   <input type="Date" class="form-control" name="date">
+              </div>
+                  
+
+              <div class="mb-3">
+                <label for="time" class="form-label">Time</label>
+                <input type="Time" class="form-control" name="time">
+              </div>
+
+
+              <div class="mb-3">
+                <label for="Report" class="form-label">Report</label>
+                <input type="text" class="form-control" name="Report">
+              </div>
+
+              <div class="form-group">
+                <label for="Prescription" class="form-label">Prescription</label>
+                <textarea class="form-control" name="Prescription" rows="3"> </textarea>
+              </div>  
+
+              <div class="form-group">
+                <label for="Discription" class="form-label">Discription</label>
+                <textarea class="form-control" name="Discription" rows="3"> </textarea>
+              </div>	      
+              <br><br>
+            
+            <div class="mb-3">
+              <button type="submit" class="btn btn-outline-info" style="background-color: #469597; color:#ffffff"> Insert </button>
+              <button type="reset" class="btn btn-outline-info" style="background-color: #469597; color:#ffffff"> Reset </button>
+
+            </div>
+
+            <br><br>
+
+             
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+</body>
+</html>

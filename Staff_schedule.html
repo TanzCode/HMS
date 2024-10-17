@@ -1,0 +1,83 @@
+<!-- Add Staff Schedule -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body style="background-image: url('bg.png'); background-attachment: fixed; background-size: 100% 100%;">
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-7 col-md-8 col-sm-7">
+            <div class="card shadow">
+                <div class="card-title text-center border-bottom" style="background-color: #469597; color:#ffffff">
+                    <h2 class="p-3">Add a new Staff schedule</h2>
+                </div>
+                <div class="card-body">
+                    <!-- Staff Schedule form -->
+                    <form action="Staff_schedule_insert.php" method="POST">
+                        
+                        <!-- Staff Schedule ID -->
+                        <div class="mb-3">
+                            <label for="S_Schedule_ID" class="form-label">Staff schedule ID</label>
+                            <input type="text" class="form-control" name="S_Schedule_ID">
+                        </div>
+                        
+                        <!-- Staff ID -->
+                        <div class="mb-3">
+                            <label for="S_ID" class="form-label">Staff ID</label>
+                            <input type="text" class="form-control" name="S_ID">
+                        </div>
+                        
+                        <!-- Date -->
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" class="form-control" name="date">
+                        </div>
+                        
+                        <!-- Start Time -->
+                        <div class="mb-3">
+                            <label for="Stime" class="form-label">Start Time</label>
+                            <input type="time" class="form-control" name="Stime">
+                        </div>
+                        
+                        <!-- End Time -->
+                        <div class="mb-3">
+                            <label for="Etime" class="form-label">End Time</label>
+                            <input type="time" class="form-control" name="Etime">
+                        </div>
+                        
+                        <!-- Department -->
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Department</label>
+                            <input type="text" class="form-control" name="department">
+                        </div>
+                        
+                        <!-- Special Note -->
+                        <div class="mb-3">
+                            <label for="note" class="form-label">Special Note</label>
+                            <textarea class="form-control" name="note"></textarea>
+                        </div>
+                        <div>
+                        <!-- Add Staff Schedule button -->
+                          <button type="submit" class="btn btn-outline-info" style="background-color: #469597; color:#ffffff">Add Staff Schedule</button>
+                        <!-- View Staff Schedule button -->
+                          <button type="submit" class="btn btn-outline-info" style="background-color: #469597; color:#ffffff" formaction="staff_schedule_search.php">View Staff Schedule</button>
+                        <!-- Reset button -->
+                          <button type="reset" class="btn btn-outline-info" style="background-color: #469597; color:#ffffff">Reset</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
